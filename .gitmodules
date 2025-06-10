@@ -1,0 +1,6 @@
+[submodule "vendor/rain.math.float"]
+	path = vendor/rain.math.float
+	url = https://github.com/rainlanguage/rain.math.float
+[submodule "vendor/rainix"]
+	path = vendor/rainix
+	url = https://github.com/rainlanguage/rainix

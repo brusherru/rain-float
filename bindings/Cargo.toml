@@ -1,0 +1,14 @@
+
+[package]
+name = "bindings"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+alloy = "1.0.9"
+hex = "0.4.3"
+revm = "24.0.1"
+wasm-bindgen = "0.2.100"
