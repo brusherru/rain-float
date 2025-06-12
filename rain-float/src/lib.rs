@@ -94,6 +94,7 @@ impl RainFloat {
 mod parse;
 mod format;
 mod add;
+mod eq;
 
 
 #[cfg(test)]
