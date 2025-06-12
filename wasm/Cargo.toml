@@ -1,0 +1,14 @@
+[package]
+name = "rain-float-wasm"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+rain_float = { path = "../rain-float" }
+wasm-bindgen = "0.2.100"
+getrandom = { version = "0.2.16", features = ["js"] }
+anyhow = "1.0"
+wasm-bindgen-test = "0.3.50"
