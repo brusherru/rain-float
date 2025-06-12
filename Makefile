@@ -11,7 +11,7 @@ all: abi
 # Generate ABI and bytecode
 abi:
 	nix develop $(RAINIX_DIR) --command bash -c '\
-	  forge build --root $(FLOAT_LIB) \
+		forge build --root $(FLOAT_LIB) \
 	'
 
 # Build the WASM module
@@ -23,14 +23,18 @@ wasm:
 
 # Run tests
 test:
-	cd rain-float && cargo test -- --nocapture; \
-	cd ../wasm && wasm-pack test --node \
+	nix develop $(RAINIX_DIR) --command bash -c '\
+		cd rain-float && cargo test -- --nocapture; \
+		cd ../wasm && wasm-pack test --node \
+	'
 
 # Clean up generated files
 clean:
-	cd rain-float && cargo clean; \
-	cd ../wasm && cargo clean; \
-	rm -rf ./js \
+	nix develop $(RAINIX_DIR) --command bash -c '\
+		cd rain-float && cargo clean; \
+		cd ../wasm && cargo clean; \
+		rm -rf ./js \
+	'
 
 # Builds everything from scratch
 build:
