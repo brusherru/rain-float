@@ -27,6 +27,15 @@ pub struct RainFloat {
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub struct Float(FixedBytes<32>);
 
+impl Float {
+    pub fn from(result: &[u8]) -> Result<Self> {
+        let mut value = [0u8; 32];
+        value.copy_from_slice(&result[0..32]);
+        // Return the new Float instance
+        Ok(Float(value.into()))
+    }
+}
+
 impl RainFloat {
     pub fn new() -> Result<Self> {
         // Decode hex => Vec<u8>
@@ -84,6 +93,7 @@ impl RainFloat {
 
 mod parse;
 mod format;
+mod add;
 
 
 #[cfg(test)]
