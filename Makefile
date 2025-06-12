@@ -17,7 +17,8 @@ abi:
 wasm:
 	nix develop --command bash -c '\
 	  cd ./wasm; \
-		wasm-pack build --target bundler --out-dir ../js \
+		wasm-pack build --target bundler --release --no-opt --no-pack --out-dir ../js/lib; \
+		wasm-pack build --target nodejs --release --no-opt --no-pack --out-dir ../js/node \
 	'
 
 # Run tests
@@ -32,7 +33,7 @@ clean:
 	nix develop --command bash -c '\
 		cd rain-float && cargo clean; \
 		cd ../wasm && cargo clean; \
-		rm -rf ./js \
+		rm -rf ./js/lib && rm -rf ./js/node \
 	'
 
 # Builds everything from scratch

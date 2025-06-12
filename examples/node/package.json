@@ -1,0 +1,14 @@
+{
+  "name": "rain-float-wasm-node-example",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "rain-float-wasm": "../../js"
+  }
+}

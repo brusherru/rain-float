@@ -1,0 +1,22 @@
+{
+  "name": "rain-float-wasm",
+  "version": "0.1.0",
+  "files": [
+    "lib",
+    "lib/rain_float_wasm.js",
+    "lib/rain_float_wasm.d.ts",
+    "lib/rain_float_wasm_bg.wasm",
+    "lib/rain_float_wasm_bg.wasm.d.ts",
+    "node",
+    "node/rain_float_wasm.js",
+    "node/rain_float_wasm.d.ts",
+    "node/rain_float_wasm_bg.wasm",
+    "node/rain_float_wasm_bg.wasm.d.ts",
+    "package.json",
+    "README.md"
+  ],
+  "main": "./node/rain_float_wasm.js",
+  "module": "./lib/rain_float_wasm.js",
+  "types": "./lib/rain_float_wasm.d.ts",
+  "sideEffects": false
+}
