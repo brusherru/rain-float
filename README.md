@@ -67,6 +67,9 @@ const res = rf.format(c);
 console.log(c); // "4.686"
 ```
 
+Check out `examples` directory for details.
+To run examples from there you need to run `make build` before.
+
 ## Development
 
 - Ensure you have installed `nix`, it is used in all scripts.
