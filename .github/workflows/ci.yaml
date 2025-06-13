@@ -49,5 +49,4 @@ jobs:
         with:
           draft: true
           files: rain-float-js.tar.gz
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
